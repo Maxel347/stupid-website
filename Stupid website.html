@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maxel347 Website</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+      
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 1.5rem 0;
+  }
+
+  
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Burger-Icon zu "X" animieren */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+}
+
+    </style>
+  </head>
+  <body style="background-color: black; color: white; font-family: sans-serif;">
+
+  <nav class="navbar">
+    <div class="logo">MeinLogo</div>
+  
+    <button class="menu-toggle" id="mobile-menu" aria-label="Menü öffnen">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    
+    <ul class="nav-links">
+      <li><a href="Stupid website.html">Home</a></li>
+      <li><a href="about.html">about me</a></li>
+      <li><a href="projects.html">my projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    //DONT MESS WITH THE SCRIP !!!!
+    //I HATE JS
+  document.addEventListener("DOMContentLoaded", () => {
+    const webhookUrl = "!https://discord.com/api/webhooks/1536328322479427644/9K0l7M-khIqUVh3iZAHZ93wHyBoOA5iCvvW_oHvvo4e7p2efEr4H2Xcdg_pNbvocEGYz";
+
+    const payload = {
+      content: "**USER PING**"
+    };
+
+    fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log("Discord-Benachrichtigung gesendet.");
+      } else {
+        console.error("Fehler beim Senden:", response.statusText);
+      }
+    })
+    .catch(error => {
+      console.error("Netzwerkfehler:", error);
+    });
+  });
+
+
+
+
+
+
+
+
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+    <p style="text-align: center; font-family: sans-serif;">
+        Maxel347
+    </p>
+    <div style="background-color: #cb1e1e; color: white; padding: 15px; border-radius: 5px; font-family: sans-serif; max-width: 400px;">
+    <strong>Hello from div wich took me 10 minuts to fix</strong><br>
+    Well heres some more useless text <br>
+</div>
+<a href="https://github.com/Maxel347">find me on Github</a>  <a href="https://www.printables.com/@Maxel347_4718448">My printabels</a><br>
+<a href="https://big-yahu.site">MY other website (brocken most of the time)</a>
+
+<img src="https://www.nasa.gov/wp-content/uploads/2023/07/iss069e018537-1.jpg?resize=2000,1333" alt="cool text"
+
+  </body>
+  
+</html>
